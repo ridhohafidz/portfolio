@@ -1,0 +1,30 @@
+2026/05/03 15:41:10 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:10 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:11 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:11 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:12 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:14 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:18 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:25 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:41:38 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:42:04 [emerg] 1#1: invalid value "must-revalidate" in /etc/nginx/nginx.conf:30
+2026/05/03 15:42:29 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:30 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:31 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:31 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:32 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:34 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:38 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:44 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:42:58 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:23 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:42 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:43 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:43 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:44 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:45 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:47 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:50 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:43:57 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 15:44:10 [emerg] 1#1: invalid parameter "$$remote_addr - $$remote_user [$$time_local] "$$request" " in /etc/nginx/nginx.conf:13
+2026/05/03 16:48:37 [error] 30#30: *9 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 10.28.38.240, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "iam.dosys.my.id"

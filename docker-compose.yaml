@@ -1,0 +1,36 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  portfolio:
+    build: .
+    container_name: ridho-portfolio
+    ports:
+      - "80:80"
+      - "443:443"  # For future SSL setup
+    volumes:
+      - ./logs:/var/log/nginx
+    restart: unless-stopped
+    environment:
+      - NGINX_WORKER_PROCESSES=auto
+      - NGINX_WORKER_CONNECTIONS=1024
+    networks:
+      - portfolio-network
+
+  # Optional: Add SSL with Let's Encrypt
+  certbot:
+    image: certbot/certbot:latest
+    container_name: ridho-certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: echo "Skipping..."
+    profiles: ["ssl"]
+
+networks:
+  portfolio-network:
+    driver: bridge
+
+volumes:
+  certbot-conf:
+  certbot-www:
