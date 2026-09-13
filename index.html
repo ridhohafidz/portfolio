@@ -3,583 +3,752 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Ridho Hafidz - System & Cloud Engineer</title>
-    <meta name="description" content="Professional portfolio of Muhammad Ridho Hafidz, System & Cloud Engineer with expertise in infrastructure operations, cloud computing, and DevOps.">
-    <meta name="keywords" content="System Engineer, Cloud Engineer, DevOps, Infrastructure, Kubernetes, AWS, GCP">
+    <title>Muhammad Ridho Hafidz - System & Cloud Engineer Portfolio</title>
+    <meta name="description" content="Professional portfolio of Muhammad Ridho Hafidz, System & Cloud Engineer with expertise in infrastructure operations, cloud computing, Kubernetes, and DevOps.">
+    <meta name="keywords" content="System Engineer, Cloud Engineer, DevOps, Infrastructure, Kubernetes, AWS, GCP, Proxmox, Red Hat, OpenStack">
     <meta name="author" content="Muhammad Ridho Hafidz">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Muhammad Ridho Hafidz - System & Cloud Engineer">
-    <meta property="og:description" content="Professional portfolio showcasing expertise in cloud infrastructure and system administration">
+    <meta property="og:description" content="High-performance cloud infrastructure, DevOps, and Linux/Windows System Administration Portfolio.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dosys.my.id">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     
-    <!-- External CSS -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Icons & CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/mobile.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=3.3">
+    <link rel="stylesheet" href="assets/css/mobile.css?v=3.3">
 </head>
 <body>
-    <div class="container">
-        <div class="profile-card">
-            <!-- Header -->
-            <header class="header">
-                <div class="profile-img">
-                    <i class="fas fa-user"></i>
+
+    <!-- 1. STICKY HEADER NAVIGATION -->
+    <header class="header-nav">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo">
+                <span class="prompt">&gt;_</span> dosys.my.id
+            </a>
+            
+            <div class="nav-menu-wrapper">
+                <nav class="nav-menu">
+                    <a href="#hero" class="nav-link active">Home</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#certifications" class="nav-link">Certifications</a>
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="https://dosys.my.id" target="_blank" rel="noopener" class="nav-link"><i class="fas fa-rss" style="font-size: 0.8rem; margin-right: 3px;"></i> Blog</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+            </div>
+
+            <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION WITH CLI TERMINAL WIDGET -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Intro Info -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-bolt"></i> Cloud &amp; System Infrastructure Specialist
+                    </div>
+                    <h1 class="hero-title">Muhammad Ridho Hafidz</h1>
+                    <div class="hero-subtitle">
+                        <span>System &amp; Cloud Engineer</span>
+                        <span class="typed-cursor"></span>
+                    </div>
+                    <p class="hero-description">
+                        Passionate System &amp; Cloud Engineer with 4+ years of hands-on experience designing, deploying, and operating high-availability cloud platforms, Kubernetes clusters, virtualized infrastructures, and automated monitoring systems.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="cv.html" target="_blank" class="btn-cv-glow" id="heroGetCvBtn">
+                            <i class="fas fa-file-arrow-down"></i>
+                            <span>Get / View CV</span>
+                            <span class="btn-cv-tag">PDF</span>
+                        </a>
+                        <button type="button" class="btn-secondary" id="previewCvModalBtn">
+                            <i class="fas fa-eye"></i>
+                            <span>Quick Preview</span>
+                        </button>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Get In Touch</span>
+                        </a>
+                        <a href="https://dosys.my.id" target="_blank" rel="noopener" class="btn-secondary">
+                            <i class="fas fa-rss"></i>
+                            <span>Tech Blog</span>
+                        </a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/ridhohafidz" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ridhohafidz" target="_blank" rel="noopener" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://dosys.my.id" target="_blank" rel="noopener" class="social-icon" title="Tech Blog & Notes">
+                            <i class="fas fa-rss"></i>
+                        </a>
+                        <a href="mailto:mridhohafidz12@gmail.com" class="social-icon" title="Email" data-copy="mridhohafidz12@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+6287881657190" class="social-icon" title="Phone" data-copy="+6287881657190">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
                 </div>
-                <h1>Muhammad Ridho Hafidz</h1>
-                <h2>System & Cloud Engineer</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Jakarta, Indonesia</span>
+
+                <!-- Right CLI Terminal Emulator -->
+                <div class="terminal-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">bash - ridho@cloud-node-01:~</div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:mridhohafidz12@gmail.com">mridhohafidz12@gmail.com</a>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="t-prompt">$ systemctl status cloud-infra.service</div>
+                        <div class="t-output">
+  ● cloud-infra.service - Multi-Cloud & System Operations<br>
+  &nbsp;&nbsp;&nbsp;Loaded: loaded (/etc/systemd/system/cloud-infra.service; <span class="t-success">enabled</span>)<br>
+  &nbsp;&nbsp;&nbsp;Active: <span class="t-success">active (running)</span> since Mar 2022<br>
+  &nbsp;&nbsp;&nbsp;Status: "Operational excellence across AWS, GCP, Proxmox & K8s"
+                        </div>
+                        <div class="t-prompt">$ _</div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+6287881657190">+62 878-8165-7190</a>
+                    <div class="terminal-chips">
+                        <span class="t-chip" data-cmd="whoami">whoami</span>
+                        <span class="t-chip" data-cmd="cv">cv</span>
+                        <span class="t-chip" data-cmd="skills">skills</span>
+                        <span class="t-chip" data-cmd="blog">blog</span>
+                        <span class="t-chip" data-cmd="uptime">uptime</span>
+                        <span class="t-chip" data-cmd="clear">clear</span>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://linkedin.com/in/ridhohafidz" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. STATS OVERVIEW BAR -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                    <div>
+                        <div class="stat-number">4+ Yrs</div>
+                        <div class="stat-label">Cloud & Infra Experience</div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/ridhohafidz" target="_blank" rel="noopener">GitHub</a>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                    <div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Professional Certifications</div>
                     </div>
-                    <div class="contact-item">
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div>
+                        <div class="stat-number">3.90</div>
+                        <div class="stat-label">GPA Bachelor's Degree</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-shield-halved"></i></div>
+                    <div>
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">High Availability & SLA Focus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-microchip"></i> Technical Skills Matrix</h2>
+            <p class="section-subtitle">Comprehensive stack of systems, cloud platforms, networking tools, and DevOps automation tools.</p>
+
+            <div class="skill-tabs">
+                <button class="skill-tab active" data-category="all">All Stack</button>
+                <button class="skill-tab" data-category="cloud">Cloud & Virtualization</button>
+                <button class="skill-tab" data-category="devops">Containers & DevOps</button>
+                <button class="skill-tab" data-category="network">Networking & Security</button>
+                <button class="skill-tab" data-category="sysadmin">SysAdmin & OS</button>
+                <button class="skill-tab" data-category="monitoring">Monitoring & Logging</button>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Cloud Platforms -->
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-card-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-google"></i> GCP</span>
+                        <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
+                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> Oracle Cloud</span>
+                        <span class="skill-tag"><i class="fas fa-layer-group"></i> OpenStack</span>
+                    </div>
+                </div>
+
+                <!-- Virtualization -->
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-card-header">
+                        <i class="fas fa-cube"></i>
+                        <h3>Virtualization</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-server"></i> Proxmox VE</span>
+                        <span class="skill-tag"><i class="fas fa-cubes"></i> OpenStack</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> VMware vSphere</span>
+                    </div>
+                </div>
+
+                <!-- Containers & Orchestration -->
+                <div class="skill-card" data-category="devops">
+                    <div class="skill-card-header">
+                        <i class="fas fa-dharmachakra"></i>
+                        <h3>Containers & Orchestration</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                        <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="skill-tag">K3s</span>
+                        <span class="skill-tag">kubeadm</span>
+                        <span class="skill-tag">Rancher RKE</span>
+                    </div>
+                </div>
+
+                <!-- Infrastructure as Code & GitOps -->
+                <div class="skill-card" data-category="devops">
+                    <div class="skill-card-header">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>IaC & GitOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fas fa-file-code"></i> Terraform</span>
+                        <span class="skill-tag"><i class="fas fa-cogs"></i> Ansible</span>
+                        <span class="skill-tag"><i class="fas fa-ship"></i> Helm</span>
+                        <span class="skill-tag">Kustomize</span>
+                        <span class="skill-tag"><i class="fas fa-archive"></i> Harbor</span>
+                    </div>
+                </div>
+
+                <!-- Operating Systems -->
+                <div class="skill-card" data-category="sysadmin">
+                    <div class="skill-card-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Operating Systems</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-linux"></i> Ubuntu</span>
+                        <span class="skill-tag"><i class="fab fa-linux"></i> CentOS</span>
+                        <span class="skill-tag"><i class="fab fa-linux"></i> Debian</span>
+                        <span class="skill-tag"><i class="fab fa-redhat"></i> RHEL</span>
+                        <span class="skill-tag"><i class="fab fa-linux"></i> Rocky Linux</span>
+                        <span class="skill-tag"><i class="fab fa-windows"></i> Windows Server 2022</span>
+                    </div>
+                </div>
+
+                <!-- Networking & Security -->
+                <div class="skill-card" data-category="network">
+                    <div class="skill-card-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Networking & Security</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MikroTik</span>
+                        <span class="skill-tag">OPNsense</span>
+                        <span class="skill-tag">VyOS</span>
+                        <span class="skill-tag">IPsec</span>
+                        <span class="skill-tag">VPN Server</span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> Fortigate / FortiWeb</span>
+                    </div>
+                </div>
+
+                <!-- Monitoring & Observability -->
+                <div class="skill-card" data-category="monitoring">
+                    <div class="skill-card-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Monitoring & Observability</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">ELK Stack</span>
+                        <span class="skill-tag">VictoriaMetrics</span>
+                        <span class="skill-tag">Telegraf</span>
+                        <span class="skill-tag">Nagios</span>
+                        <span class="skill-tag">Zabbix</span>
+                        <span class="skill-tag">Wazuh</span>
+                        <span class="skill-tag">Uptime Kuma</span>
+                    </div>
+                </div>
+
+                <!-- Backup & Email Systems -->
+                <div class="skill-card" data-category="sysadmin">
+                    <div class="skill-card-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Backup & Mail Servers</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Proxmox Backup Server</span>
+                        <span class="skill-tag">Veeam Backup</span>
+                        <span class="skill-tag">Acronis</span>
+                        <span class="skill-tag">Postfix</span>
+                        <span class="skill-tag">Zimbra</span>
+                        <span class="skill-tag">iRedMail</span>
+                        <span class="skill-tag">Dovecot</span>
+                    </div>
+                </div>
+
+                <!-- Web Hosting & Load Balancers -->
+                <div class="skill-card" data-category="sysadmin">
+                    <div class="skill-card-header">
                         <i class="fas fa-globe"></i>
-                        <a href="http://dosys.my.id" target="_blank" rel="noopener">Portfolio</a>
+                        <h3>Web Servers & Hosting</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Nginx</span>
+                        <span class="skill-tag">Nginx Load Balancer</span>
+                        <span class="skill-tag">HAProxy</span>
+                        <span class="skill-tag">Apache</span>
+                        <span class="skill-tag">IIS</span>
+                        <span class="skill-tag">cPanel</span>
+                        <span class="skill-tag">Plesk</span>
                     </div>
                 </div>
-            </header>
+            </div>
+        </div>
+    </section>
 
-            <!-- Main Content -->
-            <main class="content">
-                <!-- Professional Summary -->
-                <section class="section">
-                    <h3><i class="fas fa-user-tie"></i> Professional Summary</h3>
-                    <div class="summary">
-                        Passionate System & Cloud Engineer with solid experience in infrastructure operations, cloud computing, Linux administration, Windows server management, networking, virtualization, and monitoring. Skilled in designing, implementing, and maintaining scalable, secure, and high-performance infrastructure across traditional and cloud environments. Proven ability to improve operational efficiency, optimize system performance, and support reliable IT services through automation, best practices, and strong troubleshooting capabilities.
-                    </div>
-                </section>
+    <!-- 5. WORK EXPERIENCE TIMELINE -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+            <p class="section-subtitle">Track record of infrastructure engineering, cloud operations, and career growth.</p>
 
-                <!-- Technical Skills -->
-                <section class="section">
-                    <h3><i class="fas fa-cogs"></i> Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-server"></i> Operating Systems</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">CentOS</span>
-                                <span class="skill-tag">Debian</span>
-                                <span class="skill-tag">Ubuntu</span>
-                                <span class="skill-tag">Rocky Linux</span>
-                                <span class="skill-tag">RHEL</span>
-                                <span class="skill-tag">Windows Server 2022</span>
+            <div class="timeline">
+                <!-- Company 1: Biznet Gio -->
+                <div class="timeline-item current">
+                    <div class="timeline-marker"><i class="fas fa-cloud"></i></div>
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-company">
+                                    <i class="fas fa-building" style="color: var(--accent-cyan);"></i> PT. Biznet Gio Nusantara
+                                </div>
+                                <div class="exp-location">
+                                    <i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-tools"></i> System Administration</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Linux Administration</span>
-                                <span class="skill-tag">Windows Administration</span>
+                            <div class="exp-tenure-badge">
+                                <i class="fas fa-clock"></i> Mar 2022 - Present (4+ Years)
                             </div>
                         </div>
 
-                        <div class="skill-category">
-                            <h4><i class="fas fa-code"></i> Programming & Scripting</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Bash</span>
+                        <!-- Current Role -->
+                        <div class="position-block">
+                            <div class="role-title">
+                                <span>Cloud Engineer</span>
+                                <span class="role-badge current">Current Role</span>
+                            </div>
+                            <div class="role-date">Feb 2023 – Present (3+ Years)</div>
+                            <div class="duties-list">
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Handled on-call incident response using Jira Service Management across customer infrastructures.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Designed & deployed Neo Virtual Compute, Neo Metal, Gio Enterprise Public & Private Cloud.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Managed GCP & AWS Direct Connect environments and enterprise cloud connectivity.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Administered Linux/Windows servers, Proxmox, VMware, OpenStack, and Kubernetes clusters.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Configured Fortigate, FortiWeb, OPNsense, VyOS network security appliances.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Implemented Prometheus, Grafana, Nagios, VictoriaMetrics, and Telegraf monitoring.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Developed internal Python/Django automation tools and operational Telegram bots.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Led cloud migrations, infrastructure optimization, and mentored junior engineers.</div>
                             </div>
                         </div>
 
-                        <div class="skill-category">
-                            <h4><i class="fas fa-cube"></i> Virtualization</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Proxmox VE</span>
-                                <span class="skill-tag">OpenStack</span>
-                                <span class="skill-tag">VMware vSphere</span>
+                        <!-- Previous Role (Promotion) -->
+                        <div class="position-block">
+                            <div class="role-title">
+                                <span>Managed Services Engineer</span>
+                                <span class="role-badge advancement">Career Advancement</span>
                             </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-shield-alt"></i> Backup Solutions</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Proxmox Backup Server</span>
-                                <span class="skill-tag">Veeam Backup</span>
-                                <span class="skill-tag">Acronis</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-network-wired"></i> Networking</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">VyOS</span>
-                                <span class="skill-tag">OPNsense</span>
-                                <span class="skill-tag">MikroTik</span>
-                                <span class="skill-tag">IPsec</span>
-                                <span class="skill-tag">VPN Server</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-cloud"></i> Cloud Platforms</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Google Cloud Platform</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Azure</span>
-                                <span class="skill-tag">Oracle Cloud Infrastructure</span>
-                                <span class="skill-tag">OpenStack</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-dharmachakra"></i> Containers & Orchestration</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Kubernetes</span>
-                                <span class="skill-tag">K3s</span>
-                                <span class="skill-tag">kubeadm</span>
-                                <span class="skill-tag">Rancher Kubernetes Engine</span>
-                                <span class="skill-tag">Docker</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-globe"></i> Web Hosting</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Plesk</span>
-                                <span class="skill-tag">cPanel</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-envelope"></i> Email Servers</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Postfix</span>
-                                <span class="skill-tag">SpamAssassin</span>
-                                <span class="skill-tag">Dovecot</span>
-                                <span class="skill-tag">iRedMail</span>
-                                <span class="skill-tag">Zimbra</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-dns"></i> DNS Servers</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">PowerDNS</span>
-                                <span class="skill-tag">PowerGSLB</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-server"></i> Web Servers & Load Balancers</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Nginx</span>
-                                <span class="skill-tag">Nginx Load Balancer</span>
-                                <span class="skill-tag">Apache</span>
-                                <span class="skill-tag">IIS</span>
-                                <span class="skill-tag">HAProxy</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-database"></i> Database Administration</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">SQL Server Replication</span>
-                                <span class="skill-tag">SQL Server High Availability</span>
-                                <span class="skill-tag">MySQL Replication</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fab fa-git-alt"></i> Source Code Management</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">GitLab</span>
-                                <span class="skill-tag">GitHub</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-rocket"></i> CI/CD & Automation</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Jenkins</span>
-                                <span class="skill-tag">Ansible</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-code-branch"></i> Infrastructure as Code</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Terraform</span>
-                                <span class="skill-tag">Ansible</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-ship"></i> GitOps</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Kustomize</span>
-                                <span class="skill-tag">Helm</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-archive"></i> Image Registry</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Harbor</span>
-                                <span class="skill-tag">Docker Registry</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h4><i class="fas fa-chart-line"></i> Monitoring, Logging & Observability</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Nagios</span>
-                                <span class="skill-tag">Prometheus</span>
-                                <span class="skill-tag">Grafana</span>
-                                <span class="skill-tag">VictoriaMetrics</span>
-                                <span class="skill-tag">Telegraf</span>
-                                <span class="skill-tag">Elasticsearch</span>
-                                <span class="skill-tag">Logstash</span>
-                                <span class="skill-tag">Kibana</span>
-                                <span class="skill-tag">Wazuh</span>
-                                <span class="skill-tag">Filebeat</span>
-                                <span class="skill-tag">Auditbeat</span>
-                                <span class="skill-tag">Metricbeat</span>
-                                <span class="skill-tag">Zabbix</span>
-                                <span class="skill-tag">Uptime Kuma</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-ticket-alt"></i> ITSM & Collaboration Tools</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Jira Service Management</span>
-                                <span class="skill-tag">OpsGenie</span>
-                                <span class="skill-tag">OSTicket</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-category">
-                            <h4><i class="fas fa-database"></i> Databases</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">Microsoft SQL Server</span>
+                            <div class="role-date">Mar 2022 – Feb 2023 (11 Months)</div>
+                            <div class="duties-list">
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Supported 24/7 infrastructure operations with OpsGenie on-call rotation.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Managed Linux/Windows servers, Proxmox, VMware, OpenStack, and K8s.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Maintained hosting & mail services (Postfix, Zimbra, iRedMail, Plesk, cPanel).</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Implemented Acronis, Veeam, and Proxmox Backup Server backup solutions.</div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
 
-                <!-- Work Experience - Company Grouped (2026 VERSION) -->
-                <section class="section">
-                    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
-                    
-                    <!-- Current Company -->
-                    <div class="company-section current-company">
-                        <div class="company-header">
-                            <div class="company-info">
-                                <h4><i class="fas fa-building"></i> PT. Biznet Gio Nusantara</h4>
-                                <div class="company-details">
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</span>
-                                    <span class="tenure"><i class="fas fa-clock"></i> Mar 2022 - Present (4+ Years)</span>
-                                    <span class="promotion-badge"><i class="fas fa-arrow-trend-up"></i> Career Advancement</span>
+                <!-- Company 2: Pusilkom UI -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-server"></i></div>
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-company">
+                                    <i class="fas fa-university" style="color: var(--accent-cyan);"></i> Pusilkom UI (Pusat Ilmu Komputer UI)
+                                </div>
+                                <div class="exp-location">
+                                    <i class="fas fa-map-marker-alt"></i> Depok, Indonesia
                                 </div>
                             </div>
-                            <div class="company-logo">
-                                <i class="fas fa-cloud"></i>
+                            <div class="exp-tenure-badge">
+                                <i class="fas fa-clock"></i> Jun 2019 - Feb 2022 (2 Yrs 9 Mos)
                             </div>
                         </div>
 
-                        <div class="positions-timeline">
-                            <!-- Current Position -->
-                            <article class="position-item current">
-                                <div class="position-header">
-                                    <div class="position-info">
-                                        <div class="job-title">Cloud Engineer</div>
-                                        <div class="duration">
-                                            Feb 2023 – Present (3+ Years)
-                                            <span class="duration-badge current">Current Role</span>
-                                        </div>
-                                    </div>
-                                    <div class="promotion-indicator">
-                                        <i class="fas fa-arrow-up"></i>
-                                        <span>Advanced Role</span>
-                                    </div>
-                                </div>
-                                <ul class="job-duties">
-                                    <li>Handle on-call incident response using Jira Service Management across multiple customer infrastructures</li>
-                                    <li>Design and implement cloud infrastructure (Neo Virtual Compute, Neo Metal, Gio Enterprise Public & Private Cloud)</li>
-                                    <li>Manage cloud environments on Google Cloud Platform (GCP) and AWS connectivity (Direct Connect)</li>
-                                    <li>Administer Linux/Windows servers, virtualization platforms (Proxmox, VMware, OpenStack), and Kubernetes clusters</li>
-                                    <li>Configure and manage network appliances (Fortigate, FortiWeb, OPNsense, VyOS)</li>
-                                    <li>Maintain hosting & mail servers (Postfix, Zimbra, iRedMail, Plesk, cPanel)</li>
-                                    <li>Implement monitoring & alerting systems (Prometheus, Grafana, Nagios, VictoriaMetrics, Telegraf)</li>
-                                    <li>Develop internal tools (Python, Django) for centralized monitoring and alert integration</li>
-                                    <li>Build automation tools including Telegram bot for operational efficiency</li>
-                                    <li>Lead cloud migration projects and infrastructure optimization initiatives</li>
-                                    <li>Mentor junior engineers and establish DevOps best practices</li>
-                                    <li>Collaborate cross-team and produce monthly infrastructure reports</li>
-                                </ul>
-                            </article>
-
-                            <!-- Previous Position - Same Company -->
-                            <article class="position-item">
-                                <div class="position-header">
-                                    <div class="position-info">
-                                        <div class="job-title">Managed Services Engineer</div>
-                                        <div class="duration">
-                                            Mar 2022 – Feb 2023 (11 Months)
-                                            <span class="duration-badge">Initial Position</span>
-                                        </div>
-                                    </div>
-                                    <div class="starting-indicator">
-                                        <i class="fas fa-play"></i>
-                                        <span>Joined Team</span>
-                                    </div>
-                                </div>
-                                <ul class="job-duties">
-                                    <li>Supported 24/7 infrastructure operations with on-call rotation (OpsGenie)</li>
-                                    <li>Implemented and managed customer infrastructure across compute, network, and cloud platforms</li>
-                                    <li>Administered Linux/Windows servers, virtualization (Proxmox, VMware, OpenStack), and Kubernetes</li>
-                                    <li>Managed network devices (Fortigate, FortiWeb, OPNsense, VyOS)</li>
-                                    <li>Maintained hosting and mail services (Postfix, Zimbra, iRedMail, Plesk, cPanel)</li>
-                                    <li>Implemented monitoring & logging systems (ELK, Grafana, Prometheus)</li>
-                                    <li>Developed internal tools using Python (API integration & automation)</li>
-                                    <li>Managed backup solutions (Acronis, Veeam, Proxmox Backup Server)</li>
-                                    <li>Handled incident escalation and cross-team coordination (OSTicket)</li>
-                                    <li>Conducted R&D for infrastructure, DevOps, and security improvements</li>
-                                </ul>
-                            </article>
+                        <div class="position-block">
+                            <div class="role-title">Infrastructure Engineer</div>
+                            <div class="role-date">Jun 2019 – Feb 2022</div>
+                            <div class="duties-list">
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Managed network servers, storage systems, and data center infrastructure operations.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Installed & configured communication networks ensuring performance and reliability.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Monitored system performance and maintained high availability across services.</div>
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Coordinated hardware/software upgrades and server maintenance tasks.</div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Previous Company -->
-                    <div class="company-section">
-                        <div class="company-header">
-                            <div class="company-info">
-                                <h4><i class="fas fa-university"></i> Pusat Ilmu Komputer Universitas Indonesia (Pusilkom UI)</h4>
-                                <div class="company-details">
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Depok, Indonesia</span>
-                                    <span class="tenure"><i class="fas fa-clock"></i> Jun 2019 - Feb 2022 (2 Years 9 Months)</span>
+                <!-- Company 3: Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"><i class="fas fa-wifi"></i></div>
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <div class="exp-company">
+                                    <i class="fas fa-satellite-dish" style="color: var(--accent-cyan);"></i> PT. Lumbung Riang Communication
+                                </div>
+                                <div class="exp-location">
+                                    <i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia
                                 </div>
                             </div>
-                            <div class="company-logo">
-                                <i class="fas fa-server"></i>
+                            <div class="exp-tenure-badge">
+                                <i class="fas fa-clock"></i> Sep 2017 - Dec 2017 (4 Mos)
                             </div>
                         </div>
 
-                        <div class="positions-timeline">
-                            <article class="position-item">
-                                <div class="position-header">
-                                    <div class="position-info">
-                                        <div class="job-title">Infrastructure Engineer</div>
-                                        <div class="duration">Jun 2019 – Feb 2022</div>
-                                    </div>
-                                </div>
-                                <ul class="job-duties">
-                                    <li>Managed and maintained network servers, storage systems, and supporting infrastructure tools</li>
-                                    <li>Installed, configured, and supported communication networks to ensure performance, security, and reliability</li>
-                                    <li>Administered data center operations, including server maintenance and backup management</li>
-                                    <li>Monitored system performance and resolved hardware and software issues to maintain high availability</li>
-                                    <li>Performed website server maintenance and coordinated hardware and software upgrades</li>
-                                    <li>Provided recommendations for infrastructure improvements and system planning initiatives</li>
-                                    <li>Supported the implementation and integration of IT infrastructure solutions</li>
-                                </ul>
-                            </article>
+                        <div class="position-block">
+                            <div class="role-title">Network Technical Support Intern</div>
+                            <div class="role-date">Sep 2017 – Dec 2017</div>
+                            <div class="duties-list">
+                                <div class="duty-item"><i class="fas fa-chevron-right"></i> Installed and supported computer networks, Wi-Fi hotspot services, and helpdesk support for Indosat environments.</div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- First Company/Internship -->
-                    <div class="company-section internship">
-                        <div class="company-header">
-                            <div class="company-info">
-                                <h4><i class="fas fa-satellite-dish"></i> PT. Lumbung Riang Communication</h4>
-                                <div class="company-details">
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</span>
-                                    <span class="tenure"><i class="fas fa-clock"></i> Sep 2017 - Dec 2017 (4 Months)</span>
-                                    <span class="internship-badge"><i class="fas fa-graduation-cap"></i> Internship Program</span>
-                                </div>
-                            </div>
-                            <div class="company-logo">
-                                <i class="fas fa-wifi"></i>
-                            </div>
-                        </div>
+    <!-- 6. CERTIFICATIONS SHOWCASE -->
+    <section id="certifications" class="cert-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-award"></i> Professional Certifications</h2>
+            <p class="section-subtitle">Verified professional credentials across Cloud, System Admin, Security, and Networking.</p>
 
-                        <div class="positions-timeline">
-                            <article class="position-item intern">
-                                <div class="position-header">
-                                    <div class="position-info">
-                                        <div class="job-title">Network Technical Support Intern</div>
-                                        <div class="duration">Sep 2017 – Dec 2017</div>
-                                    </div>
-                                </div>
-                                <ul class="job-duties">
-                                    <li>Installed, maintained, and supported computer networks, desktop systems, and Wi-Fi hotspot services</li>
-                                    <li>Provided technical support and helpdesk services for Indosat KPPTI and Indosat M2 environments</li>
-                                    <li>Gained hands-on experience with telecommunications infrastructure</li>
-                                    <li>Learned professional communication and customer service skills</li>
-                                </ul>
-                            </article>
-                        </div>
+            <div class="cert-filter">
+                <button class="cert-filter-btn active" data-filter="all">All Certifications</button>
+                <button class="cert-filter-btn" data-filter="aws">AWS & Cloud</button>
+                <button class="cert-filter-btn" data-filter="redhat">Red Hat</button>
+                <button class="cert-filter-btn" data-filter="acronis">Acronis & Security</button>
+                <button class="cert-filter-btn" data-filter="fortinet">Fortinet & Network</button>
+                <button class="cert-filter-btn" data-filter="cpanel">cPanel & Plesk</button>
+            </div>
+
+            <div class="cert-grid">
+                <!-- AWS -->
+                <div class="cert-card aws">
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <div class="cert-info">
+                        <h4>AWS Academy Graduate – Cloud Architecting</h4>
+                        <span class="cert-category-tag">Amazon Web Services</span>
                     </div>
-                </section>
+                </div>
 
+                <div class="cert-card aws">
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <div class="cert-info">
+                        <h4>AWS Academy Graduate – Cloud Foundations</h4>
+                        <span class="cert-category-tag">Amazon Web Services</span>
+                    </div>
+                </div>
+
+                <!-- Red Hat -->
+                <div class="cert-card redhat">
+                    <div class="cert-icon"><i class="fab fa-redhat"></i></div>
+                    <div class="cert-info">
+                        <h4>Red Hat System Administration I (RH124)</h4>
+                        <span class="cert-category-tag">Red Hat Linux</span>
+                    </div>
+                </div>
+
+                <div class="cert-card redhat">
+                    <div class="cert-icon"><i class="fab fa-redhat"></i></div>
+                    <div class="cert-info">
+                        <h4>Red Hat OpenStack Administration I</h4>
+                        <span class="cert-category-tag">Red Hat Cloud</span>
+                    </div>
+                </div>
+
+                <!-- ZStack -->
+                <div class="cert-card aws">
+                    <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+                    <div class="cert-info">
+                        <h4>ZStack Cloud Computing Consultant (ZCCC)</h4>
+                        <span class="cert-category-tag">ZStack Cloud</span>
+                    </div>
+                </div>
+
+                <div class="cert-card aws">
+                    <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+                    <div class="cert-info">
+                        <h4>ZStack Cloud Computing Technician (ZCCT)</h4>
+                        <span class="cert-category-tag">ZStack Cloud</span>
+                    </div>
+                </div>
+
+                <!-- cPanel & Plesk -->
+                <div class="cert-card cpanel">
+                    <div class="cert-icon"><i class="fas fa-cog"></i></div>
+                    <div class="cert-info">
+                        <h4>cPanel & WHM System Administrator I</h4>
+                        <span class="cert-category-tag">cPanel Systems</span>
+                    </div>
+                </div>
+
+                <div class="cert-card cpanel">
+                    <div class="cert-icon"><i class="fas fa-server"></i></div>
+                    <div class="cert-info">
+                        <h4>Plesk Obsidian Professional</h4>
+                        <span class="cert-category-tag">Plesk Web Systems</span>
+                    </div>
+                </div>
+
+                <!-- Acronis -->
+                <div class="cert-card acronis">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cert-info">
+                        <h4>Cloud Tech Fundamentals</h4>
+                        <span class="cert-category-tag">Acronis Cyber Protection</span>
+                    </div>
+                </div>
+
+                <div class="cert-card acronis">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cert-info">
+                        <h4>Cloud Tech Professional EDR</h4>
+                        <span class="cert-category-tag">Acronis Cyber Protection</span>
+                    </div>
+                </div>
+
+                <div class="cert-card acronis">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cert-info">
+                        <h4>Cloud Tech Professional Advanced Backup</h4>
+                        <span class="cert-category-tag">Acronis Cyber Protection</span>
+                    </div>
+                </div>
+
+                <!-- Security & Network -->
+                <div class="cert-card fortinet">
+                    <div class="cert-icon"><i class="fas fa-lock"></i></div>
+                    <div class="cert-info">
+                        <h4>ICSI | Certified Network Security Specialist</h4>
+                        <span class="cert-category-tag">CNSS Security</span>
+                    </div>
+                </div>
+
+                <div class="cert-card mikrotik">
+                    <div class="cert-icon"><i class="fas fa-wifi"></i></div>
+                    <div class="cert-info">
+                        <h4>MikroTik Certified Network Associate (MTCNA)</h4>
+                        <span class="cert-category-tag">MikroTik RouterOS</span>
+                    </div>
+                </div>
+
+                <div class="cert-card fortinet">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="cert-info">
+                        <h4>NSE 1 & 2 Network Security Associate</h4>
+                        <span class="cert-category-tag">Fortinet Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. EDUCATION & HONORS -->
+    <section id="education" class="edu-awards-section">
+        <div class="container">
+            <div class="edu-grid">
                 <!-- Education -->
-                <section class="section">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="education-card">
-                        <h4>Bachelor's Degree in Information Technology</h4>
-                        <p><strong>Sekolah Tinggi Teknologi Terpadu Nurul Fikri</strong></p>
-                        <p>Sep 2020 – Mar 2024 | Jakarta, Indonesia</p>
-                        <p><strong>GPA: 3.90</strong></p>
-                        <p><em>Thesis: Implementation of Continuous Integration and Continuous Deployment (CI/CD) for Web Application Development in a Kubernetes Environment using Rancher Kubernetes Engine</em></p>
+                <div class="edu-card">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <h3>Bachelor's Degree in Information Technology</h3>
+                    <p style="color: var(--text-secondary); margin-top: 0.25rem;">Sekolah Tinggi Teknologi Terpadu Nurul Fikri (STT Terpadu NF)</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Sep 2020 – Mar 2024 | Jakarta, Indonesia</p>
+                    <div class="edu-gpa-badge">GPA: 3.90 / 4.00 (Cum Laude)</div>
+                    <div class="thesis-box">
+                        <strong>Thesis:</strong> Implementation of Continuous Integration and Continuous Deployment (CI/CD) for Web Application Development in a Kubernetes Environment using Rancher Kubernetes Engine (RKE).
                     </div>
-                </section>
+                </div>
 
-                <!-- Certifications - Complete -->
-                <section class="section">
-                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                <!-- Award -->
+                <div class="award-card">
+                    <h2 class="section-title"><i class="fas fa-trophy"></i> Honors & Awards</h2>
+                    <h3 style="font-size: 1.1rem; color: var(--accent-cyan); margin-bottom: 0.5rem;">
+                        🏆 1st Winner, Mathematics Competition
+                    </h3>
+                    <p style="color: var(--text-secondary); font-weight: 600;">Pamulang University | Nov 2018</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.75rem; line-height: 1.6;">
+                        Awarded 1st place in the Mathematics Competition for Vocational High Schools across DKI Jakarta, Banten, and West Java regions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Cloud Platforms -->
-                    <div class="cert-category">
-                        <h4><i class="fas fa-cloud"></i> Cloud Platforms</h4>
-                        <div class="cert-grid">
-                            <div class="cert-item aws">
-                                <i class="fab fa-aws"></i>
-                                <span>AWS Academy Graduate – Cloud Architecting</span>
-                            </div>
-                            <div class="cert-item aws">
-                                <i class="fab fa-aws"></i>
-                                <span>AWS Academy Graduate – Cloud Foundations</span>
-                            </div>
-                            <div class="cert-item cloud">
-                                <i class="fas fa-server"></i>
-                                <span>ZStack Cloud Computing Technician (ZCCT)</span>
-                            </div>
-                            <div class="cert-item cloud">
-                                <i class="fas fa-server"></i>
-                                <span>ZStack Cloud Computing Consultant (ZCCC)</span>
-                            </div>
-                            <div class="cert-item redhat">
-                                <i class="fab fa-redhat"></i>
-                                <span>Red Hat OpenStack Administration I</span>
-                            </div>
+    <!-- 8. CONTACT SECTION & FOOTER -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-box">
+                <h2 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem;">Let's Connect & Collaborate</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem;">
+                    Interested in cloud infrastructure, Kubernetes automation, or DevOps consultation? Feel free to reach out directly.
+                </p>
+
+                <div class="contact-grid">
+                    <a href="mailto:mridhohafidz12@gmail.com" class="contact-card" data-copy="mridhohafidz12@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-card-text">
+                            <span>Email Address (Click to Copy)</span>
+                            <strong>mridhohafidz12@gmail.com</strong>
                         </div>
-                    </div>
+                    </a>
 
-                    <!-- System Administration -->
-                    <div class="cert-category">
-                        <h4><i class="fas fa-server"></i> System Administration</h4>
-                        <div class="cert-grid">
-                            <div class="cert-item redhat">
-                                <i class="fab fa-redhat"></i>
-                                <span>Red Hat System Administration I (RH124)</span>
-                            </div>
-                            <div class="cert-item cpanel">
-                                <i class="fas fa-cog"></i>
-                                <span>cPanel & WHM System Administrator I</span>
-                            </div>
-                            <div class="cert-item cpanel">
-                                <i class="fas fa-cog"></i>
-                                <span>cPanel Professional Certification (CPP)</span>
-                            </div>
-                            <div class="cert-item plesk">
-                                <i class="fas fa-server"></i>
-                                <span>Plesk Obsidian Associate</span>
-                            </div>
-                            <div class="cert-item plesk">
-                                <i class="fas fa-server"></i>
-                                <span>Plesk Obsidian Professional</span>
-                            </div>
+                    <a href="tel:+6287881657190" class="contact-card" data-copy="+6287881657190">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-card-text">
+                            <span>Phone Number (Click to Copy)</span>
+                            <strong>+62 878-8165-7190</strong>
                         </div>
-                    </div>
+                    </a>
 
-                    <!-- Backup & Security -->
-                    <div class="cert-category">
-                        <h4><i class="fas fa-shield-alt"></i> Backup & Security</h4>
-                        <div class="cert-grid">
-                            <div class="cert-item acronis">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Cloud Tech Fundamentals – Acronis</span>
-                            </div>
-                            <div class="cert-item acronis">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Cloud Tech Professional EDR – Acronis</span>
-                            </div>
-                            <div class="cert-item acronis">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Cloud Tech Professional Advanced Backup – Acronis</span>
-                            </div>
-                            <div class="cert-item security">
-                                <i class="fas fa-lock"></i>
-                                <span>Cyber Security Foundation Professional Certificate (CSFPC)</span>
-                            </div>
-                            <div class="cert-item security">
-                                <i class="fas fa-lock"></i>
-                                <span>ICSI | Certified Network Security Specialist (CNSS)</span>
-                            </div>
+                    <a href="https://linkedin.com/in/ridhohafidz" target="_blank" rel="noopener" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <div class="contact-card-text">
+                            <span>LinkedIn Profile</span>
+                            <strong>/in/ridhohafidz</strong>
                         </div>
-                    </div>
+                    </a>
 
-                    <!-- Network & Security -->
-                    <div class="cert-category">
-                        <h4><i class="fas fa-network-wired"></i> Network & Security</h4>
-                        <div class="cert-grid">
-                            <div class="cert-item mikrotik">
-                                <i class="fas fa-wifi"></i>
-                                <span>MikroTik Certified Network Associate (MTCNA)</span>
-                            </div>
-                            <div class="cert-item fortinet">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>NSE 1 Network Security Associate – Fortinet</span>
-                            </div>
-                            <div class="cert-item fortinet">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>NSE 2 Network Security Associate – Fortinet</span>
-                            </div>
+                    <a href="https://github.com/ridhohafidz" target="_blank" rel="noopener" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <div class="contact-card-text">
+                            <span>GitHub Portfolio</span>
+                            <strong>github.com/ridhohafidz</strong>
                         </div>
-                    </div>
+                    </a>
 
-                    <!-- DevOps & Development -->
-                    <div class="cert-category">
-                        <h4><i class="fas fa-code"></i> DevOps & Development</h4>
-                        <div class="cert-grid">
-                            <div class="cert-item devops">
-                                <i class="fas fa-infinity"></i>
-                                <span>NolSatu Academy | DevOps – NolSatu</span>
-                            </div>
+                    <a href="https://dosys.my.id" target="_blank" rel="noopener" class="contact-card">
+                        <i class="fas fa-rss"></i>
+                        <div class="contact-card-text">
+                            <span>Tech Notes & Articles</span>
+                            <strong>dosys.my.id</strong>
                         </div>
-                    </div>
-                </section>
+                    </a>
 
-                <!-- Honors & Awards -->
-                <section class="section">
-                    <h3><i class="fas fa-trophy"></i> Honors & Awards</h3>
-                    <div class="award-card">
-                        <h4>🏆 1st Winner, Mathematics Competition for Vocational High Schools</h4>
-                        <p>Pamulang University | Nov 2018</p>
-                        <p>Won 1st place in a mathematics competition for vocational high schools across DKI Jakarta, Banten, and West Java</p>
-                    </div>
-                </section>
-            </main>
+                    <a href="cv.html" target="_blank" class="contact-card cv-contact-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="contact-card-text">
+                            <span>Curriculum Vitae</span>
+                            <strong>View & Download CV (PDF)</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Footer -->
-            <footer class="footer">
-                <p>&copy; 2026 Muhammad Ridho Hafidz. All rights reserved.</p>
-            </footer>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div>
+                &copy; 2026 <strong>Muhammad Ridho Hafidz</strong>. All rights reserved.
+            </div>
+            <div style="font-family: var(--font-mono); color: var(--accent-cyan);">
+                Designed for High-Availability Infrastructure
+            </div>
+        </div>
+    </footer>
+
+    <!-- CV QUICK PREVIEW MODAL VIEWER -->
+    <div id="cvModal" class="cv-modal-backdrop" aria-hidden="true">
+        <div class="cv-modal-box">
+            <div class="cv-modal-header">
+                <div class="cv-modal-title">
+                    <div class="cv-modal-icon-badge">
+                        <i class="fas fa-file-lines"></i>
+                    </div>
+                    <div class="cv-modal-titles">
+                        <div class="cv-modal-name">Muhammad Ridho Hafidz — CV</div>
+                        <div class="cv-modal-sub">System &amp; Cloud Engineer &bull; ATS-Friendly Preview</div>
+                    </div>
+                </div>
+                <div class="cv-modal-ctrls">
+                    <a href="cv.html" target="_blank" class="cv-modal-btn" title="Open Full Page in New Tab">
+                        <i class="fas fa-arrow-up-right-from-square"></i> <span>Full Page</span>
+                    </a>
+                    <button type="button" class="cv-modal-btn cv-modal-btn-primary" id="modalPrintBtn" title="Print or Save as PDF">
+                        <i class="fas fa-download"></i> <span>Save / Print PDF</span>
+                    </button>
+                    <button type="button" class="cv-modal-close" id="closeCvModal" aria-label="Close CV Modal" title="Close Preview (Esc)">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="cv-modal-body">
+                <iframe src="cv.html" class="cv-modal-iframe" title="Muhammad Ridho Hafidz CV Preview"></iframe>
+            </div>
         </div>
     </div>
 
-    <!-- External JavaScript -->
-    <script src="assets/js/script.js"></script>
+    <!-- TOAST NOTIFICATION & BACK TO TOP -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i>
+        <span class="toast-msg">Copied to clipboard!</span>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JS -->
+    <script src="assets/js/script.js?v=3.3"></script>
 </body>
 </html>

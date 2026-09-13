@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Muhammad Ridho Hafidz | System & Cloud Engineer</title>
+    <meta name="description" content="Official Curriculum Vitae of Muhammad Ridho Hafidz - System & Cloud Engineer specializing in AWS, GCP, Kubernetes, Linux/Windows Administration, and DevOps.">
+    <meta name="author" content="Muhammad Ridho Hafidz">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-body: #090d16;
+            --bg-paper: #0f172a;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-accent: #00f2fe;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --accent-green: #00e676;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --shadow-paper: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 242, 254, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.55;
+            padding-bottom: 3rem;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 20% 15%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(112, 0, 255, 0.05) 0%, transparent 40%);
+        }
+
+        /* Top Action Bar */
+        .cv-topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(9, 13, 22, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .cv-topbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+        }
+
+        .cv-topbar-brand i {
+            color: var(--accent-cyan);
+        }
+
+        .cv-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            font-family: var(--font-sans);
+        }
+
+        .btn-action-primary {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #090d16;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .btn-action-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+            color: #000;
+        }
+
+        .btn-action-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        .btn-action-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+        }
+
+        /* CV Document Container */
+        .cv-container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            background: var(--bg-paper);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 3rem 3.5rem;
+            box-shadow: var(--shadow-paper);
+            position: relative;
+        }
+
+        /* CV Header */
+        .cv-header {
+            border-bottom: 2px solid rgba(0, 242, 254, 0.4);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .cv-name {
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+        }
+
+        .cv-role {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            margin-bottom: 0.75rem;
+        }
+
+        .cv-location {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .cv-contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.25rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        .cv-contact-bar a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .cv-contact-bar a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .cv-contact-bar .sep {
+            color: var(--text-muted);
+        }
+
+        /* CV Sections */
+        .cv-section {
+            margin-bottom: 1.75rem;
+        }
+
+        .cv-section-title {
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-cyan);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            padding-bottom: 0.4rem;
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cv-summary-text {
+            color: #e2e8f0;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            text-align: justify;
+        }
+
+        /* Skills Matrix */
+        .cv-skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .cv-skill-row {
+            font-size: 0.88rem;
+            line-height: 1.45;
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 0.5rem;
+        }
+
+        .cv-skill-label {
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .cv-skill-val {
+            color: #cbd5e1;
+        }
+
+        /* Work Experience Blocks */
+        .cv-company-block {
+            margin-bottom: 1.4rem;
+        }
+
+        .cv-company-name {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .cv-job-block {
+            margin-top: 0.75rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid rgba(0, 242, 254, 0.3);
+        }
+
+        .cv-job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .cv-job-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        .cv-job-meta {
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+        }
+
+        .cv-bullet-list {
+            list-style: none;
+            margin-top: 0.4rem;
+        }
+
+        .cv-bullet-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            margin-bottom: 0.35rem;
+            line-height: 1.5;
+        }
+
+        .cv-bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0.25rem;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        /* Education & Certifications */
+        .cv-edu-block {
+            margin-bottom: 0.85rem;
+        }
+
+        .cv-edu-school {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .cv-edu-degree {
+            font-size: 0.92rem;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        .cv-edu-meta {
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            margin: 0.15rem 0 0.4rem 0;
+            font-family: var(--font-mono);
+        }
+
+        .cv-edu-details {
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        .cv-certs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.35rem 1.5rem;
+        }
+
+        .cv-cert-item {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            position: relative;
+            padding-left: 1.15rem;
+            line-height: 1.4;
+        }
+
+        .cv-cert-item::before {
+            content: "•";
+            position: absolute;
+            left: 0.2rem;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        /* Toast notification */
+        .toast-cv {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(13, 17, 23, 0.95);
+            border: 1px solid var(--accent-green);
+            color: #fff;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.88rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 1000;
+        }
+
+        .toast-cv.show {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* -------------------------------------------------------------
+           PRINT STYLESHEET (CLEAN ATS-FRIENDLY & HIGH CONTRAST)
+           ------------------------------------------------------------- */
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm 15mm;
+            }
+
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                background-image: none !important;
+                font-size: 9pt !important;
+                line-height: 1.4 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .cv-topbar, .toast-cv, #cvToast {
+                display: none !important;
+            }
+
+            .cv-container {
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: #ffffff !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .cv-header {
+                border-bottom: 2px solid #000000 !important;
+                padding-bottom: 8px !important;
+                margin-bottom: 12px !important;
+                page-break-after: avoid !important;
+                break-after: avoid !important;
+            }
+
+            .cv-name {
+                color: #000000 !important;
+                font-size: 20pt !important;
+                line-height: 1.15 !important;
+            }
+
+            .cv-role {
+                color: #111111 !important;
+                font-size: 11pt !important;
+                font-weight: 700 !important;
+                margin-bottom: 4px !important;
+            }
+
+            .cv-location, .cv-contact-bar, .cv-contact-bar a {
+                color: #333333 !important;
+                font-size: 8.5pt !important;
+            }
+
+            .cv-section {
+                margin-bottom: 14px !important;
+                break-inside: auto !important;
+                page-break-inside: auto !important;
+            }
+
+            .cv-section-title {
+                color: #000000 !important;
+                border-bottom: 1.5px solid #000000 !important;
+                font-size: 10.5pt !important;
+                font-weight: 800 !important;
+                margin-top: 12px !important;
+                margin-bottom: 6px !important;
+                padding-bottom: 3px !important;
+                page-break-after: avoid !important;
+                break-after: avoid !important;
+            }
+
+            .cv-section-title i {
+                display: none !important;
+            }
+
+            .cv-summary-text, .cv-skill-row, .cv-bullet-list li, .cv-edu-details, .cv-cert-item {
+                color: #111111 !important;
+                font-size: 8.6pt !important;
+                line-height: 1.38 !important;
+            }
+
+            .cv-skill-row {
+                grid-template-columns: 180px 1fr !important;
+                gap: 3px 6px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .cv-skill-label {
+                color: #000000 !important;
+                font-weight: 700 !important;
+            }
+
+            .cv-skill-val {
+                color: #222222 !important;
+            }
+
+            .cv-company-block {
+                margin-bottom: 10px !important;
+                page-break-inside: auto !important;
+                break-inside: auto !important;
+            }
+
+            .cv-company-name {
+                color: #000000 !important;
+                font-size: 10.2pt !important;
+                font-weight: 800 !important;
+                page-break-after: avoid !important;
+                break-after: avoid !important;
+            }
+
+            .cv-job-block {
+                border-left: 2px solid #555555 !important;
+                padding-left: 8px !important;
+                margin-top: 6px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .cv-job-title, .cv-edu-degree {
+                color: #111111 !important;
+                font-size: 9.3pt !important;
+                font-weight: 700 !important;
+            }
+
+            .cv-job-meta, .cv-edu-meta {
+                color: #444444 !important;
+                font-size: 8.3pt !important;
+            }
+
+            /* Education & Certifications: Keep intact together without orphan headings */
+            .cv-section.cv-edu-section,
+            .cv-edu-block {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .cv-edu-school {
+                color: #000000 !important;
+                font-size: 10pt !important;
+                font-weight: 800 !important;
+                page-break-after: avoid !important;
+                break-after: avoid !important;
+            }
+
+            .cv-certs-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 2px 14px !important;
+                page-break-inside: auto !important;
+                break-inside: auto !important;
+            }
+
+            .cv-cert-item {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .cv-bullet-list {
+                padding-left: 14px !important;
+                margin-top: 3px !important;
+            }
+
+            .cv-bullet-list li {
+                margin-bottom: 2px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+        }
+
+        /* Embedded inside Preview Modal */
+        body.in-iframe {
+            background: #080b13;
+            background-image: none;
+            padding: 1.5rem 1rem 3rem 1rem;
+            min-height: auto;
+        }
+
+        body.in-iframe .cv-topbar {
+            display: none !important;
+        }
+
+        body.in-iframe .cv-container {
+            margin: 0 auto;
+            max-width: 860px;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 242, 254, 0.1);
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .cv-container {
+                margin: 1rem;
+                padding: 1.75rem 1.25rem;
+            }
+
+            body.in-iframe .cv-container {
+                padding: 1.5rem 1.25rem;
+                margin: 0.5rem auto;
+            }
+
+            .cv-name {
+                font-size: 1.75rem;
+            }
+
+            .cv-skill-row {
+                grid-template-columns: 1fr;
+                gap: 0.15rem;
+            }
+
+            .cv-certs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cv-actions {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Action Bar -->
+    <header class="cv-topbar">
+        <a href="index.html" class="cv-topbar-brand">
+            <i class="fas fa-arrow-left"></i> <span>dosys.my.id (Portfolio)</span>
+        </a>
+
+        <div class="cv-actions">
+            <button class="btn-action btn-action-primary" onclick="window.print();" id="printCvBtn">
+                <i class="fas fa-print"></i> Print / Save as PDF
+            </button>
+            <button class="btn-action btn-action-secondary" onclick="copyCvUrl();">
+                <i class="fas fa-link"></i> Copy CV Link
+            </button>
+            <a href="mailto:mridhohafidz12@gmail.com" class="btn-action btn-action-secondary">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </div>
+    </header>
+
+    <!-- Main CV Paper -->
+    <main class="cv-container" id="cvDocument">
+        <!-- Header -->
+        <header class="cv-header">
+            <h1 class="cv-name">Muhammad Ridho Hafidz</h1>
+            <div class="cv-role">System & Cloud Engineer</div>
+            <div class="cv-location">
+                <i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia
+            </div>
+            <div class="cv-contact-bar">
+                <a href="mailto:mridhohafidz12@gmail.com"><i class="fas fa-envelope"></i> mridhohafidz12@gmail.com</a>
+                <span class="sep">|</span>
+                <a href="tel:+6287881657190"><i class="fas fa-phone"></i> +62 878-8165-7190</a>
+                <span class="sep">|</span>
+                <a href="https://linkedin.com/in/ridhohafidz" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> linkedin.com/in/ridhohafidz</a>
+                <span class="sep">|</span>
+                <a href="https://github.com/ridhohafidz" target="_blank" rel="noopener"><i class="fab fa-github"></i> github.com/ridhohafidz</a>
+                <span class="sep">|</span>
+                <a href="https://dosys.my.id" target="_blank" rel="noopener"><i class="fas fa-globe"></i> dosys.my.id</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="cv-section">
+            <h2 class="cv-section-title"><i class="fas fa-user-tie"></i> Professional Summary</h2>
+            <p class="cv-summary-text">
+                Passionate System & Cloud Engineer with solid experience in infrastructure operations, cloud computing, Linux administration, Windows server management, networking, virtualization, and monitoring. Skilled in designing, implementing, and maintaining scalable, secure, and high-performance infrastructure across traditional and cloud environments. Proven ability to improve operational efficiency, optimize system performance, and support reliable IT services through automation, best practices, and strong troubleshooting capabilities.
+            </p>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="cv-section">
+            <h2 class="cv-section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="cv-skills-list">
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Soft Skills:</span>
+                    <span class="cv-skill-val">Problem Solving, Communication, Teamwork</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Operating Systems:</span>
+                    <span class="cv-skill-val">CentOS, Debian, Ubuntu, Rocky Linux, Red Hat Enterprise Linux (RHEL), Windows Server 2022</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">System Administration:</span>
+                    <span class="cv-skill-val">Linux Administration, Windows Administration</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Programming & Scripting:</span>
+                    <span class="cv-skill-val">Python, Bash</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Virtualization:</span>
+                    <span class="cv-skill-val">Proxmox VE, OpenStack, VMware vSphere</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Backup Solutions:</span>
+                    <span class="cv-skill-val">Proxmox Backup Server, Veeam Backup, Acronis</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Networking:</span>
+                    <span class="cv-skill-val">VyOS, OPNsense, MikroTik, IPsec, VPN Server</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Cloud Platforms:</span>
+                    <span class="cv-skill-val">Google Cloud Platform (GCP), AWS, Azure, Oracle Cloud Infrastructure, OpenStack</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Containers & Orchestration:</span>
+                    <span class="cv-skill-val">Kubernetes, K3s, kubeadm, Rancher Kubernetes Engine (RKE), Docker</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Web Hosting:</span>
+                    <span class="cv-skill-val">Plesk, cPanel</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Email Servers:</span>
+                    <span class="cv-skill-val">Postfix, SpamAssassin, Dovecot, iRedMail, Zimbra</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">DNS Servers:</span>
+                    <span class="cv-skill-val">PowerDNS, PowerGSLB</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Web Servers & Load Balancers:</span>
+                    <span class="cv-skill-val">Nginx, Nginx Load Balancer, Apache, IIS, HAProxy</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Database Administration:</span>
+                    <span class="cv-skill-val">SQL Server Replication, SQL Server High Availability, MySQL Replication, PostgreSQL</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Source Code Management:</span>
+                    <span class="cv-skill-val">GitLab, GitHub</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">CI/CD & Automation:</span>
+                    <span class="cv-skill-val">Jenkins, Ansible</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Infrastructure as Code:</span>
+                    <span class="cv-skill-val">Terraform, Ansible</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">GitOps:</span>
+                    <span class="cv-skill-val">Kustomize, Helm</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Image Registry:</span>
+                    <span class="cv-skill-val">Harbor, Docker Registry</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Monitoring & Observability:</span>
+                    <span class="cv-skill-val">Nagios, Prometheus, Grafana, VictoriaMetrics, Telegraf, Elasticsearch, Logstash, Kibana, Wazuh, Filebeat, Auditbeat, Metricbeat, Zabbix, Uptime Kuma</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">ITSM & Collaboration:</span>
+                    <span class="cv-skill-val">Jira Service Management, OpsGenie, OSTicket</span>
+                </div>
+                <div class="cv-skill-row">
+                    <span class="cv-skill-label">Databases:</span>
+                    <span class="cv-skill-val">MySQL, PostgreSQL, Microsoft SQL Server</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="cv-section">
+            <h2 class="cv-section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+            
+            <!-- Company 1: Biznet Gio -->
+            <div class="cv-company-block">
+                <div class="cv-company-name">PT. Biznet Gio Nusantara</div>
+                
+                <!-- Role 1 -->
+                <div class="cv-job-block">
+                    <div class="cv-job-header">
+                        <div class="cv-job-title">Cloud Engineer</div>
+                        <div class="cv-job-meta">Jakarta, Indonesia | Feb 2023 – Present</div>
+                    </div>
+                    <ul class="cv-bullet-list">
+                        <li>Handle on-call incident response using Jira Service Management across multiple customer infrastructures.</li>
+                        <li>Design and implement cloud infrastructure (Neo Virtual Compute, Neo Metal, Gio Enterprise Public & Private Cloud).</li>
+                        <li>Manage cloud environments on Google Cloud Platform (GCP) and AWS connectivity (Direct Connect).</li>
+                        <li>Administer Linux/Windows servers, virtualization platforms (Proxmox, VMware, OpenStack), and Kubernetes clusters.</li>
+                        <li>Configure and manage network appliances (Fortigate, FortiWeb, OPNsense, VyOS).</li>
+                        <li>Maintain hosting & mail servers (Postfix, Zimbra, iRedMail, Plesk, cPanel).</li>
+                        <li>Implement monitoring & alerting systems (Prometheus, Grafana, Nagios, VictoriaMetrics, Telegraf).</li>
+                        <li>Develop internal tools (Python, Django) for centralized monitoring and alert integration (Uptime Kuma, Zabbix, Acronis).</li>
+                        <li>Build automation tools including Telegram bot for operational efficiency.</li>
+                        <li>Manage backup solutions (Acronis, Veeam, Proxmox Backup Server).</li>
+                        <li>Collaborate cross-team and mentor junior engineers.</li>
+                        <li>Produce monthly infrastructure reports and support continuous improvement initiatives.</li>
+                    </ul>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="cv-job-block" style="margin-top: 1rem;">
+                    <div class="cv-job-header">
+                        <div class="cv-job-title">Managed Services Engineer</div>
+                        <div class="cv-job-meta">Jakarta, Indonesia | Mar 2022 – Feb 2023</div>
+                    </div>
+                    <ul class="cv-bullet-list">
+                        <li>Supported 24/7 infrastructure operations with on-call rotation (OpsGenie).</li>
+                        <li>Implemented and managed customer infrastructure across compute, network, and cloud platforms.</li>
+                        <li>Administered Linux/Windows servers, virtualization (Proxmox, VMware, OpenStack), and Kubernetes.</li>
+                        <li>Managed network devices (Fortigate, FortiWeb, OPNsense, VyOS).</li>
+                        <li>Maintained hosting and mail services (Postfix, Zimbra, iRedMail, Plesk, cPanel).</li>
+                        <li>Implemented monitoring & logging systems (ELK, Grafana, Prometheus).</li>
+                        <li>Developed internal tools using Python (API integration & automation).</li>
+                        <li>Managed backup solutions (Acronis, Veeam, Proxmox Backup Server).</li>
+                        <li>Handled incident escalation and cross-team coordination (OSTicket).</li>
+                        <li>Conducted R&D for infrastructure, DevOps, and security improvements.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Company 2: Pusilkom UI -->
+            <div class="cv-company-block">
+                <div class="cv-company-name">Pusat Ilmu Komputer Universitas Indonesia (Pusilkom UI)</div>
+                <div class="cv-job-block">
+                    <div class="cv-job-header">
+                        <div class="cv-job-title">Infrastructure Engineer</div>
+                        <div class="cv-job-meta">Depok, Indonesia | Jun 2019 – Feb 2022</div>
+                    </div>
+                    <ul class="cv-bullet-list">
+                        <li>Managed and maintained network servers, storage systems, and supporting infrastructure tools.</li>
+                        <li>Installed, configured, and supported communication networks to ensure performance, security, and reliability.</li>
+                        <li>Administered data center operations, including server maintenance and backup management.</li>
+                        <li>Monitored system performance and resolved hardware and software issues to maintain high availability.</li>
+                        <li>Performed website server maintenance and coordinated hardware and software upgrades.</li>
+                        <li>Provided recommendations for infrastructure improvements and system planning initiatives.</li>
+                        <li>Supported the implementation and integration of IT infrastructure solutions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Company 3: Lumbung Riang -->
+            <div class="cv-company-block">
+                <div class="cv-company-name">PT. Lumbung Riang Communication</div>
+                <div class="cv-job-block">
+                    <div class="cv-job-header">
+                        <div class="cv-job-title">Network Technical Support Intern</div>
+                        <div class="cv-job-meta">Jakarta, Indonesia | Sep 2017 – Dec 2017</div>
+                    </div>
+                    <ul class="cv-bullet-list">
+                        <li>Installed, maintained, and supported computer networks, desktop systems, and Wi-Fi hotspot services.</li>
+                        <li>Provided technical support and helpdesk services for Indosat KPPTI and Indosat M2 environments.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section cv-edu-section">
+            <h2 class="cv-section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="cv-edu-block">
+                <div class="cv-edu-school">Sekolah Tinggi Teknologi Terpadu Nurul Fikri</div>
+                <div class="cv-edu-degree">Bachelor's Degree in Information Technology</div>
+                <div class="cv-edu-meta">Jakarta, Indonesia | Sep 2020 – Mar 2024 &nbsp;|&nbsp; <strong>GPA: 3.90 / 4.00</strong></div>
+                <div class="cv-edu-details">
+                    <strong>Undergraduate Thesis:</strong> Implementation of Continuous Integration and Continuous Deployment (CI/CD) for Web Application Development in a Kubernetes Environment using Rancher Kubernetes Engine.
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="cv-section">
+            <h2 class="cv-section-title"><i class="fas fa-award"></i> Certifications</h2>
+            <div class="cv-certs-grid">
+                <div class="cv-cert-item">Cloud Tech Fundamentals – Acronis</div>
+                <div class="cv-cert-item">Cloud Tech Professional EDR – Acronis</div>
+                <div class="cv-cert-item">Cloud Tech Professional Advanced Backup – Acronis</div>
+                <div class="cv-cert-item">cPanel & WHM System Administrator I Certification Exam – cPanel</div>
+                <div class="cv-cert-item">cPanel Professional Certification Exam (CPP) – cPanel</div>
+                <div class="cv-cert-item">Plesk Obsidian Associate – Plesk University</div>
+                <div class="cv-cert-item">Plesk Obsidian Professional – Plesk University</div>
+                <div class="cv-cert-item">AWS Academy Graduate – AWS Academy Cloud Architecting – AWS</div>
+                <div class="cv-cert-item">AWS Academy Graduate – AWS Academy Cloud Foundations – AWS</div>
+                <div class="cv-cert-item">ZStack Cloud Computing Technician (ZCCT) – ZStack International</div>
+                <div class="cv-cert-item">ZStack Cloud Computing Consultant (ZCCC) – ZStack International</div>
+                <div class="cv-cert-item">Cyber Security Foundation Professional Certificate (CSFPC) – Certiprof</div>
+                <div class="cv-cert-item">Red Hat System Administration I (RH124) – Red Hat</div>
+                <div class="cv-cert-item">Red Hat OpenStack Administration I: Core Operations – Red Hat</div>
+                <div class="cv-cert-item">MikroTik Certified Network Associate (MTCNA) – MikroTik</div>
+                <div class="cv-cert-item">ICSI | Certified Network Security Specialist (CNSS) – DefensityOne</div>
+                <div class="cv-cert-item">NSE 2 Network Security Associate – Fortinet</div>
+                <div class="cv-cert-item">NSE 1 Network Security Associate – Fortinet</div>
+                <div class="cv-cert-item">NolSatu Academy | DevOps – NolSatu</div>
+            </div>
+        </section>
+
+        <!-- Honors and Awards -->
+        <section class="cv-section">
+            <h2 class="cv-section-title"><i class="fas fa-trophy"></i> Honors and Awards</h2>
+            <div class="cv-edu-block">
+                <div class="cv-edu-school">1st Winner, Mathematics Competition for Vocational High Schools</div>
+                <div class="cv-edu-meta">Pamulang University | Nov 2018</div>
+                <div class="cv-edu-details">
+                    Won 1st place in a mathematics competition for vocational high schools across DKI Jakarta, Banten, and West Java.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="cvToast" class="toast-cv">
+        <i class="fas fa-check-circle" style="color: var(--accent-green);"></i>
+        <span id="cvToastMsg">Link copied to clipboard!</span>
+    </div>
+
+    <script>
+        // Check if inside modal iframe
+        if (window.self !== window.top) {
+            document.body.classList.add('in-iframe');
+        }
+
+        function copyCvUrl() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const toast = document.getElementById('cvToast');
+                document.getElementById('cvToastMsg').textContent = "CV URL copied to clipboard!";
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
+            });
+        }
+    </script>
+</body>
+</html>
