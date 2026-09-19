@@ -4,8 +4,8 @@ FROM nginx:alpine
 # Set working directory
 WORKDIR /usr/share/nginx/html
 
-# Remove default nginx website
-RUN rm -rf /usr/share/nginx/html/*
+# Remove default nginx website and slow entrypoint scripts
+RUN rm -rf /usr/share/nginx/html/* /docker-entrypoint.d/*
 
 # Copy website files
 COPY . /usr/share/nginx/html/

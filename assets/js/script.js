@@ -173,30 +173,52 @@ function initCertFilters() {
    -------------------------------------------------------------------------- */
 function initNavigation() {
   const header = document.querySelector('.header-nav');
-  const toggleBtn = document.querySelector('.mobile-nav-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const toggleBtn = document.getElementById('mobileNavToggle');
+  const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+  const navBackdrop = document.getElementById('navBackdrop');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+  const desktopLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  const drawerLinks = document.querySelectorAll('.drawer-link');
+  const allNavLinks = [...desktopLinks, ...drawerLinks];
   const sections = document.querySelectorAll('section, header');
 
-  // Sticky Header on Scroll
+  // Open Mobile Drawer
+  const openDrawer = () => {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.add('active');
+    mobileDrawer.setAttribute('aria-hidden', 'false');
+    if (navBackdrop) navBackdrop.classList.add('active');
+    document.body.classList.add('nav-open');
+  };
+
+  // Close Mobile Drawer
+  const closeDrawer = () => {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.remove('active');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
+    if (navBackdrop) navBackdrop.classList.remove('active');
+    document.body.classList.remove('nav-open');
+  };
+
+  // Sticky Header on Scroll & Scrollspy
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
 
-    // ScrollSpy Active Link
+    // ScrollSpy Active Link Tracking
     let current = '';
     sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
+      const sectionTop = section.offsetTop - 120;
       const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
         current = section.getAttribute('id');
       }
     });
 
-    navLinks.forEach(link => {
+    allNavLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href') === `#${current}`) {
         link.classList.add('active');
@@ -204,30 +226,45 @@ function initNavigation() {
     });
   });
 
-  // Mobile Drawer Toggle
+  // Mobile Drawer Open Button
   if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      const icon = toggleBtn.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (mobileDrawer && mobileDrawer.classList.contains('active')) {
+        closeDrawer();
+      } else {
+        openDrawer();
       }
     });
   }
 
-  // Close Mobile Drawer on Link Click
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-        const icon = toggleBtn.querySelector('i');
-        if (icon) {
-          icon.classList.add('fa-bars');
-          icon.classList.remove('fa-times');
-        }
-      }
+  // Mobile Drawer Close Button
+  if (closeDrawerBtn) {
+    closeDrawerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeDrawer();
     });
+  }
+
+  // Backdrop Click to Close
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', () => {
+      closeDrawer();
+    });
+  }
+
+  // Close Mobile Drawer on Drawer Link Click
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('active')) {
+      closeDrawer();
+    }
   });
 }
 
